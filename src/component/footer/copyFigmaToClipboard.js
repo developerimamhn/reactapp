@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import image9 from './image9.png';
+import image10 from './image10.png';
 
 // Function to copy the Figma data to the clipboard
 const copyFigmaToClipboard = (figmaCode) => {
@@ -34,11 +35,20 @@ const copyFigmaToClipboard = (figmaCode) => {
 const CopyFigmaComponentButton = ({
   figmaCode
 }) => {
+      const [imageSrc, setImageSrc] = useState(image9);
+    // const [copied, setCopied] = useState(false);
+
+    const handleImageChange = () => {
+        setImageSrc(image10);
+        setTimeout(() => {
+            setImageSrc(image9);
+        }, 700);
+    };
   return (
-    <div>
-      <button className="searchitems group !bg-[#F5F5F5] group-hover:!bg-[#C6EA60] duration-300 cursor-pointer "  onClick={() => copyFigmaToClipboard(figmaCode)}>
+    <div className="" onClick={handleImageChange}>
+      <button className="searchitems group !bg-[#F5F5F5] group-hover:!bg-[#C6EA60] duration-300 cursor-pointer "  onClick={() => copyFigmaToClipboard(figmaCode)} >
             <p className='absolute top-[-32px] right-[0px] copybutton m-0 p-0' >
-            <img src={image9} alt="Image" />
+            <img src={imageSrc} alt="Image" />
             </p>
             <svg
                 className="group-hover:stroke-[#000] stroke-[#7C808E] w-[16px] lg:w-[18px] xl:w-[20px] 2xl:w-[22px]"
