@@ -2,128 +2,135 @@
 
 import React, {useState} from 'react';
 // import Image from 'next/image';
-import image1 from './image/image (1).png';
-import image2 from './image/image (2).png';
-import image3 from './image/image (3).png';
-import image4 from './image/image (4).png';
-import image5 from './image/image (5).png';
-import image6 from './image/image (6).png';
-import image7 from './image/image (7).png';
-import image8 from './image/image (8).png';
+// import image1 from './image/image (1).png';
+// import image2 from './image/image (2).png';
+// import image3 from './image/image (3).png';
+// import image4 from './image/image (4).png';
+// import image5 from './image/image (5).png';
+// import image6 from './image/image (6).png';
+// import image7 from './image/image (7).png';
+// import image8 from './image/image (8).png';
 // import image9 from './image/image9.png';
 // import image10 from './image/image10.png';
 import CopyFigmaComponentButton from '../footer/copyFigmaToClipboard';
 
 
 const Page2 = () => {
-    const data = [
-        {
-            img: image1,
-            title: 'Signup',
-            date: '24 July Updated',
-        },
-        {
-            img: image2,
-            title: 'Deposit',
-            date: '24 July Updated',
-        },
-        {
-            img: image3,
-            title: 'Confirmations',
-            date: '24 July Updated',
-        },
-        {
-            img: image4,
-            title: 'Withdrawals',
-            date: '24 July Updated',
-        },
-        {
-            img: image5,
-            title: 'Settings',
-            date: '24 July Updated',
-        },
-        {
-            img: image6,
-            title: 'Reports',
-            date: '24 July Updated',
-        },
-        {
-            img: image7,
-            title: 'Analytics',
-            date: '24 July Updated',
-        },
-        {
-            img: image8,
-            title: 'Support',
-            date: '24 July Updated',
-        },
-        {
-            img: image1,
-            title: 'Signup',
-            date: '24 July Updated',
-        },
-        {
-            img: image2,
-            title: 'Deposit',
-            date: '24 July Updated',
-        },
-        {
-            img: image3,
-            title: 'Confirmations',
-            date: '24 July Updated',
-        },
-        {
-            img: image4,
-            title: 'Withdrawals',
-            date: '24 July Updated',
-        },
-        {
-            img: image5,
-            title: 'Settings',
-            date: '24 July Updated',
-        },
-        {
-            img: image6,
-            title: 'Reports',
-            date: '24 July Updated',
-        },
-        {
-            img: image7,
-            title: 'Analytics',
-            date: '24 July Updated',
-        },
-        {
-            img: image8,
-            title: 'Support',
-            date: '24 July Updated',
-        },
-    ];
-    // const [imageSrc, setImageSrc] = useState(image9);
-    // // const [copied, setCopied] = useState(false);
-
-    // const handleImageChange = () => {
-    //     setImageSrc(image10);
-    //     setTimeout(() => {
-    //         setImageSrc(image9);
-    //     }, 700);
-    // };
+    // const data = [
+    //     {
+    //         img: image1,
+    //         title: 'Signup',
+    //         date: '24 July Updated',
+    //     },
+    //     {
+    //         img: image2,
+    //         title: 'Deposit',
+    //         date: '24 July Updated',
+    //     },
+    //     {
+    //         img: image3,
+    //         title: 'Confirmations',
+    //         date: '24 July Updated',
+    //     },
+    //     {
+    //         img: image4,
+    //         title: 'Withdrawals',
+    //         date: '24 July Updated',
+    //     },
+    //     {
+    //         img: image5,
+    //         title: 'Settings',
+    //         date: '24 July Updated',
+    //     },
+    //     {
+    //         img: image6,
+    //         title: 'Reports',
+    //         date: '24 July Updated',
+    //     },
+    //     {
+    //         img: image7,
+    //         title: 'Analytics',
+    //         date: '24 July Updated',
+    //     },
+    //     {
+    //         img: image8,
+    //         title: 'Support',
+    //         date: '24 July Updated',
+    //     },
+    //     {
+    //         img: image1,
+    //         title: 'Signup',
+    //         date: '24 July Updated',
+    //     },
+    //     {
+    //         img: image2,
+    //         title: 'Deposit',
+    //         date: '24 July Updated',
+    //     },
+    //     {
+    //         img: image3,
+    //         title: 'Confirmations',
+    //         date: '24 July Updated',
+    //     },
+    //     {
+    //         img: image4,
+    //         title: 'Withdrawals',
+    //         date: '24 July Updated',
+    //     },
+    //     {
+    //         img: image5,
+    //         title: 'Settings',
+    //         date: '24 July Updated',
+    //     },
+    //     {
+    //         img: image6,
+    //         title: 'Reports',
+    //         date: '24 July Updated',
+    //     },
+    //     {
+    //         img: image7,
+    //         title: 'Analytics',
+    //         date: '24 July Updated',
+    //     },
+    //     {
+    //         img: image8,
+    //         title: 'Support',
+    //         date: '24 July Updated',
+    //     },
+    // ];
 
     
     return (
-        <div>
-            <div className="mx-auto px-[24px] sm:px-[50px]">
-                <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-x-[30px] gap-y-[15px]">
-                    {data.map((item, index) => (
-                        <div className="figmavlue group border-[1px] border-[#F3F4F1]" key={index}>
-                            <div className="valueimage w-full">
-                                <img className="w-full" src={item.img} alt={item.title} />
-                            </div>
-                            <div className="flex justify-between items-center w-full  relative">
-                                <div className="flex flex-col">
-                                    <h4 className="Signup m-0 p-0">{item.title}</h4>
-                                    <p className="date mt-[6px] mb-0 p-0">{item.date}</p>
-                                </div>
-                                {/* <button className="searchitems group !bg-[#F5F5F5] group-hover:!bg-[#C6EA60] duration-300 cursor-pointer " onClick={handleImageChange}>
+        // <div>
+        //     <div className="mx-auto px-[24px] sm:px-[50px]">
+        //         <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-x-[30px] gap-y-[15px]">
+        //             {data.map((item, index) => (
+        //                 <div className="figmavlue group border-[1px] border-[#F3F4F1]" key={index}>
+        //                     <div className="valueimage w-full">
+        //                         <img className="w-full" src={item.img} alt={item.title} />
+        //                     </div>
+        //                     <div className="flex justify-between items-center w-full  relative">
+        //                         <div className="flex flex-col">
+        //                             <h4 className="Signup m-0 p-0">{item.title}</h4>
+        //                             <p className="date mt-[6px] mb-0 p-0">{item.date}</p>
+        //                         </div>
+                                
+                                <CopyFigmaComponentButton/>
+        //                     </div>
+        //                 </div>
+        //             ))}
+        //         </div>
+        //     </div>
+        // </div>
+    );
+};
+
+
+export default Page2;
+
+
+
+{/* <button className="searchitems group !bg-[#F5F5F5] group-hover:!bg-[#C6EA60] duration-300 cursor-pointer " onClick={handleImageChange}>
                                     <p className='absolute top-[-32px] right-[0px] copybutton m-0 p-0' >
                                     <img src={imageSrc} alt="Image" />
                                     </p>
@@ -149,15 +156,15 @@ const Page2 = () => {
                                         />
                                     </svg>
                                 </button> */}
-                                <CopyFigmaComponentButton/>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div>
-    );
-};
+                                
+                                
+                                
+                                // const [imageSrc, setImageSrc] = useState(image9);
+    // // const [copied, setCopied] = useState(false);
 
-
-export default Page2;
+    // const handleImageChange = () => {
+    //     setImageSrc(image10);
+    //     setTimeout(() => {
+    //         setImageSrc(image9);
+    //     }, 700);
+    // };
