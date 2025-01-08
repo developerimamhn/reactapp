@@ -1,8 +1,8 @@
 "use client";
 
-import React from 'react'
-import Page1 from './Page1';
-import Page2 from './Page2';
+import React, { Suspense, lazy } from 'react';
+const Page1 = lazy(() => import('./Page1'));
+const Page2 = lazy(() => import('./Page2'));
 // import Page3 from './Page3';
 
 
@@ -12,9 +12,12 @@ import Page2 from './Page2';
 const Body = () => {
     return (
         <div>
-            <Page1/>
-            <Page2/>
-            {/* <Page3/> */}
+            <Suspense fallback={<div className='absolute left-[50%] top-[40%] translate-[-50%, -50%]'>Loading ...</div>}>
+                <Page1 />
+            </Suspense>
+            <Suspense fallback={<div className='absolute left-[50%] top-[45%] translate-[-50%, -50%]'>Loading ...</div>}>
+                <Page2 />
+            </Suspense>
         </div>
     );
 };
